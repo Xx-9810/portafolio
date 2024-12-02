@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sudaderas Kuromi</title>
+<style>
+
+h1 {
+    color: #db3210;
+    font-family: Georgia, serif;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #FFB284;
+    color: black;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    border: 4px solid #FFC0CB;
+    border-radius: 100px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapercave.com/wp/wp6565060.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.container {
+    max-width: 40%;
+    margin: 20px auto;
+    padding: 0 10px;
+    color: #000000;
+}
+
+.product {
+    border: 0px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+#contador {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+
+    .product {
+        padding: 10px 15px;
+    }
+
+    #contador {
+        font-size: 1em;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sudaderas Kuromi</h1>
+
+    <div class="product">
+        <h2>Sudadera rosa con capucha</h2>
+        <img src="https://m.media-amazon.com/images/I/71eJscGYhhL._AC_UL1000_.jpg" alt="Sudadera rosa con capucha">
+        <p>Sudadera de calidad y muy calientita</p>
+        <p>Precio: $1500.00</p>
+        <button id="botonE">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Suéter negro</h2>
+        <img src="https://i.etsystatic.com/26301962/r/il/50aae7/3061414451/il_fullxfull.3061414451_j0jp.jpg" alt="Suéter negro">
+        <p>De alta calidad y muy acogedora</p>
+        <p>Precio: $700.00</p>
+        <button id="botonD">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera negra con capucha</h2>
+        <img src="https://cf.shopee.com.mx/file/sg-11134201-22120-vhl8x5gfblkveb" alt="Sudadera negra con capucha">
+        <p>Cómoda y muy ligera</p>
+        <p>Precio: $1300.00</p>
+        <button id="botonC">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera azul claro</h2>
+        <img src="https://i.etsystatic.com/26610644/r/il/79ac2e/3096165962/il_fullxfull.3096165962_jcbh.jpg" alt="Sudadera azul claro">
+        <p>Sudadera de calidad y muy calientita</p>
+        <p>Precio: $700.00</p>
+        <button id="botonB">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera blanca con capucha</h2>
+        <img src="https://i.etsystatic.com/24225408/r/il/6bc371/2697135009/il_1588xN.2697135009_kamj.jpg" alt="Sudadera blanca con capucha">
+        <p>Sudadera afelpada</p>
+        <p>Precio: $850.00</p>
+        <button id="botonA">Comprar</button>
+    </div>
+
+    <h3 id="contador">No has comprado nada: $0</h3>
+    <button onclick="Aviso()">Comprar</button>
+
+    <div class="product">
+        <a href="17abril.html"><button>Regresar</button></a>
+    </div>
+</div>
+
+<script>
+var botonA = document.getElementById('botonA');
+var botonB = document.getElementById('botonB');
+var botonC = document.getElementById('botonC');
+var botonD = document.getElementById('botonD');
+var botonE = document.getElementById('botonE');
+var contador = document.getElementById('contador');
+var clics = 0;
+var total = 0;
+
+botonA.addEventListener('click', function() {
+    clics++;
+    total += 850;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonB.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonC.addEventListener('click', function() {
+    clics++;
+    total += 1300;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonD.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonE.addEventListener('click', function() {
+    clics++;
+    total += 1500;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+function Aviso() {
+    alert("GRACIAS POR SU COMPRA");
+}
+</script>
+
+</body>
+</html>

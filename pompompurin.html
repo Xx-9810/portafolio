@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo de Productos</title>
+<style>
+
+h1 {
+    color: #db3210;
+    font-family: Georgia, serif;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #FFB284;
+    color: black;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    border: 4px solid #FFC0CB;
+    border-radius: 100px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpaperaccess.com/full/1468300.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.container {
+    max-width: 40%;
+    margin: 20px auto;
+    padding: 0 10px;
+    color: #000000;
+}
+
+.product {
+    border: 0px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+#contador {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+
+    .product {
+        padding: 10px 15px;
+    }
+
+    #contador {
+        font-size: 1em;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SUDADERAS</h1>
+
+    <div class="product">
+        <h2>Sudadera blanco y café de Pompompurin</h2>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_663134-MLM73655493467_122023-O.webp" alt="Sudadera blanco y café de Pompompurin">
+        <p>Sudadera de calidad y muy calientita</p>
+        <p>Precio: $1500.00</p>
+        <button id="botonE">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera gris con capucha</h2>
+        <img src="https://m.media-amazon.com/images/I/B1Wsm-8LxOS._CLa%7C2140%2C2000%7CB19m3mN0GVS.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX425_.png" alt="Sudadera gris con capucha">
+        <p>De alta calidad y muy acogedora</p>
+        <p>Precio: $700.00</p>
+        <button id="botonD">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Suéter amarillo Pompompurin</h2>
+        <img src="https://www.artbox.co.uk/images/693600_Jumper_PN_1_650.jpg" alt="Suéter amarillo Pompompurin">
+        <p>Cómoda y muy ligera</p>
+        <p>Precio: $1300.00</p>
+        <button id="botonC">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera con capucha Pompompurin</h2>
+        <img src="https://www.artbox.co.uk/images/SAN1150_Hoodie_PN_1_650.jpg" alt="Sudadera con capucha Pompompurin">
+        <p>Ideal para combinar con todo tu guardarropa</p>
+        <p>Precio: $700.00</p>
+        <button id="botonB">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera estilo Pompompurin</h2>
+        <img src="https://res.cloudinary.com/teepublic/image/private/s--EcW3FZqL--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_-52/g_north_west,u_upload:v1446840653:production:blanks:f6q1psnlmvhpoighmph1,x_-391,y_-328/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1534315087/production/designs/3022936_0.jpg" alt="Sudadera estilo Pompompurin">
+        <p>Sudadera color gris afelpada</p>
+        <p>Precio: $850.00</p>
+        <button id="botonA">Comprar</button>
+    </div>
+
+    <h3 id="contador">No has comprado nada: $0</h3>
+    <button onclick="Aviso()">Comprar</button>
+
+    <div class="product">
+        <a href="17abril.html"><button>Regresar</button></a>
+    </div>
+</div>
+
+<script>
+var botonA = document.getElementById('botonA');
+var botonB = document.getElementById('botonB');
+var botonC = document.getElementById('botonC');
+var botonD = document.getElementById('botonD');
+var botonE = document.getElementById('botonE');
+var contador = document.getElementById('contador');
+var clics = 0;
+var total = 0;
+
+botonA.addEventListener('click', function() {
+    clics++;
+    total += 850;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonB.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonC.addEventListener('click', function() {
+    clics++;
+    total += 1300;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonD.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonE.addEventListener('click', function() {
+    clics++;
+    total += 1500;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+function Aviso() {
+    alert("GRACIAS POR SU COMPRA");
+}
+</script>
+
+</body>
+</html>

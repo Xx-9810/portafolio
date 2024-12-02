@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sudaderas Hello Kitty</title>
+<style>
+
+h1 {
+    color: #db3210;
+    font-family: Georgia, serif;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #FFB284;
+    color: black;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    border: 4px solid #FFC0CB;
+    border-radius: 100px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images1.fanpop.com/images/photos/2300000/Hello-Kitty-hello-kitty-2359048-1024-768.gif');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.container {
+    max-width: 40%;
+    margin: 20px auto;
+    padding: 0 10px;
+    color: #000000;
+}
+
+.product {
+    border: 0px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+#contador {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+
+    .product {
+        padding: 10px 15px;
+    }
+
+    #contador {
+        font-size: 1em;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sudaderas Hello Kitty</h1>
+
+    <div class="product">
+        <h2>Chamarra rosa con capucha</h2>
+        <img src="https://www.almovintage.cz/wp-content/uploads/2021/05/Hello-Kitty-hoodie-pink-C-W-S-1177_1-1268x1536.png" alt="Chamarra rosa con capucha">
+        <p>Sudadera de calidad y muy calientita</p>
+        <p>Precio: $1500.00</p>
+        <button id="botonE">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera verde con capucha</h2>
+        <img src="https://permanentbrand.ie/wp-content/uploads/2020/12/Hello-kitty-hoodie.png" alt="Sudadera verde con capucha">
+        <p>De alta calidad y muy acogedora</p>
+        <p>Precio: $700.00</p>
+        <button id="botonD">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Suéter con estampado de Hello Kitty</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0422/1039/4261/products/CEPRINTHK_900x.png?v=1607369827" alt="Suéter con estampado de Hello Kitty">
+        <p>Cómodo y muy ligero</p>
+        <p>Precio: $1300.00</p>
+        <button id="botonC">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera gris</h2>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sudadera-hello-kitty-19-99-1552316063.png?crop=1xw:1xh;center,top&resize=480:*" alt="Sudadera gris">
+        <p>Sudadera de calidad y muy calientita</p>
+        <p>Precio: $700.00</p>
+        <button id="botonB">Comprar</button>
+    </div>
+
+    <div class="product">
+        <h2>Sudadera roja con capucha</h2>
+        <img src="https://carnavaldemexico.mx/cdn/shop/products/SU16880.png?v=1611705117" alt="Sudadera roja con capucha">
+        <p>Sudadera afelpada</p>
+        <p>Precio: $850.00</p>
+        <button id="botonA">Comprar</button>
+    </div>
+
+    <h3 id="contador">No has comprado nada: $0</h3>
+    <button onclick="Aviso()">Comprar</button>
+
+    <div class="product">
+        <a href="17abril.html"><button>Regresar</button></a>
+    </div>
+</div>
+
+<script>
+var botonA = document.getElementById('botonA');
+var botonB = document.getElementById('botonB');
+var botonC = document.getElementById('botonC');
+var botonD = document.getElementById('botonD');
+var botonE = document.getElementById('botonE');
+var contador = document.getElementById('contador');
+var clics = 0;
+var total = 0;
+
+botonA.addEventListener('click', function() {
+    clics++;
+    total += 850;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonB.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonC.addEventListener('click', function() {
+    clics++;
+    total += 1300;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonD.addEventListener('click', function() {
+    clics++;
+    total += 700;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+botonE.addEventListener('click', function() {
+    clics++;
+    total += 1500;
+    contador.textContent = clics + " total de tu carrito: $" + total;
+});
+
+function Aviso() {
+    alert("¡Gracias por su compra!");
+}
+</script>
+
+</body>
+</html>
